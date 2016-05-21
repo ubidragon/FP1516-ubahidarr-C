@@ -1,1 +1,10 @@
 *.log
+*.xml
+.metadata/.plugins
+*.json
+*.prefs
+*.snap
+*.version
+*.tree
+*.xmi
+*.gen
