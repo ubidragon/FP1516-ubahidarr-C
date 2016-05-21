@@ -7,6 +7,12 @@
 
 #include "asignatura.h"
 #include <string.h>
+#include "logico.h"
+
+
+
+
+ 
 int inicializaAsignatura(PAsignatura res, const Cadena nombre,
 		const Codigo codigo, double creditos, int curso,
 		const Cadena departamento) {

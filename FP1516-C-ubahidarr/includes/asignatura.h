@@ -10,8 +10,10 @@
 
 #include "cadena.h"
 #include "logico.h"
+
 #define MAXASIG 100
 #define CODIGOLEN 8
+ 
 typedef char Codigo[CODIGOLEN];
 typedef struct {
 	Cadena nombre;
