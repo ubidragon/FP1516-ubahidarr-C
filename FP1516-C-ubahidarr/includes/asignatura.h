@@ -8,12 +8,14 @@
 #ifndef INCLUDES_ASIGNATURA_H_
 #define INCLUDES_ASIGNATURA_H_
 
-#include "cadena.h"
+#include <string.h>
+#include <stdio.h>
 #include "logico.h"
+#include "cadena.h"
 
 #define MAXASIG 100
 #define CODIGOLEN 8
- 
+
 typedef char Codigo[CODIGOLEN];
 typedef struct {
 	Cadena nombre;
@@ -30,16 +32,14 @@ int inicializaAsignatura(PAsignatura res, const Cadena nombre,
 void muestraAsignatura(Asignatura a);
 void muestraAsignaturas(const ArrayAsignaturas res, int nAsig);
 /* Funciones auxiliares */
-Logico checkCodigo(const TipoCodigo codigo);
+Logico checkCodigo(const Codigo codigo);
 Logico checkCurso(int curso);
 Logico checkCreditos(double creditos);
 
-#include <stdio.h> /* Para usar FILE */
-(…)
 int leeAsignaturasFichero(const Cadena nombreFichero, ArrayAsignaturas res);
-(…)
+
 /* Funciones auxiliares */
-(…)
+
 void leeAsignaturaFichero(FILE *f, PAsignatura a);
 
 #endif /* INCLUDES_ASIGNATURA_H_ */

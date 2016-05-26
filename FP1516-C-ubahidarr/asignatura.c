@@ -6,13 +6,7 @@
  */
 
 #include "asignatura.h"
-#include <string.h>
-#include "logico.h"
 
-
-
-
- 
 int inicializaAsignatura(PAsignatura res, const Cadena nombre,
 		const Codigo codigo, double creditos, int curso,
 		const Cadena departamento) {
@@ -23,9 +17,7 @@ int inicializaAsignatura(PAsignatura res, const Cadena nombre,
 	} else if (!checkCreditos(creditos)) {
 		fprintf(stderr, "Error en créditos de asignatura: %lf\n", creditos);
 		status = -1;
-	}
-
-	else if (!checkCurso(curso)) {
+	} else if (!checkCurso(curso)) {
 		fprintf(stderr, "Error en curso de asignatura: %d\n", curso);
 		status = -1;
 	} else {

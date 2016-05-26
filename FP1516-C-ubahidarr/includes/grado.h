@@ -9,8 +9,6 @@
 #define INCLUDES_GRADO_H_
 
 #include "asignatura.h"
-#include "cadena.h"
-#include "logico.h"
 
 typedef struct {
 	Cadena nombre;

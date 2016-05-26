@@ -45,10 +45,10 @@ testGrado:
 
 testEspacio:
 #   Descomente la siguiente línea una vez implementado testEspacio
-#	-$(C_COMPILER) $(INC_DIRS) $(SRC_FILES4) -o $(TARGET4)
+	-$(C_COMPILER) $(INC_DIRS) $(SRC_FILES4) -o $(TARGET4)
 	
 testCentro:
 #   Descomente la siguiente línea una vez implementado testCentro
-#	-$(C_COMPILER) $(INC_DIRS) $(SRC_FILES5) -o $(TARGET5)
+	-$(C_COMPILER) $(INC_DIRS) $(SRC_FILES5) -o $(TARGET5)
 	
 default: testCadena testAsignatura testGrado testEspacio testCentro

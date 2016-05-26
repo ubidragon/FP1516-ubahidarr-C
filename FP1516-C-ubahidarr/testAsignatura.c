@@ -5,19 +5,18 @@
  *      Author: Ubidragon
  */
 
-#include <stdio.h>
-#include <string.h>
-#include "cadena.h"
 #include "asignatura.h"
+#include "cadena.h"
 
 void testLeeAsignaturasFichero(const Cadena nombreFichero);
 void testInicializaAsignatura1();
 void testInicializaAsignatura2();
 void testInicializaAsignatura3();
 void testInicializaAsignatura4();
-void testInicializaAsignatura(const Cadena, const Codigo, double, int, const Cadena);
+void testInicializaAsignatura(const Cadena, const Codigo, double, int,
+		const Cadena);
 
-int main(void){
+int main(void) {
 
 	testLeeAsignaturasFichero("./res/asignaturas.txt");
 	testInicializaAsignatura1();
@@ -33,38 +32,40 @@ void testLeeAsignaturasFichero(const Cadena nombreFichero) {
 	ArrayAsignaturas asignaturas;
 	int nAsig;
 
-	nAsig=leeAsignaturasFichero(nombreFichero,asignaturas);
-	muestraAsignaturas(asignaturas,nAsig);
+	nAsig = leeAsignaturasFichero(nombreFichero, asignaturas);
+	muestraAsignaturas(asignaturas, nAsig);
 }
 
-void testInicializaAsignatura1(){
+void testInicializaAsignatura1() {
 	printf("*** testInicializaAsignatura1 ***\n");
-	testInicializaAsignatura("Fundamentos de Programación",
-			"12345767", 12.0, 1, "LSI");
+	testInicializaAsignatura("Fundamentos de Programación", "12345767", 12.0, 1,
+			"LSI");
 }
 
-void testInicializaAsignatura2(){
+void testInicializaAsignatura2() {
 	printf("*** testInicializaAsignatura2 ***\n");
-	testInicializaAsignatura("Fundamentos de Programación",
-				"1234567", -1.0, 1, "LSI");
+	testInicializaAsignatura("Fundamentos de Programación", "1234567", -1.0, 1,
+			"LSI");
 }
 
-void testInicializaAsignatura3(){
+void testInicializaAsignatura3() {
 	printf("*** testInicializaAsignatura3 ***\n");
-	testInicializaAsignatura("Fundamentos de Programación",
-				"1234567", 12.0, 6, "LSI");
+	testInicializaAsignatura("Fundamentos de Programación", "1234567", 12.0, 6,
+			"LSI");
 }
 
-void testInicializaAsignatura4(){
+void testInicializaAsignatura4() {
 	printf("*** testInicializaAsignatura4 ***\n");
-	testInicializaAsignatura("Fundamentos de Programación",
-				"1234567", 12.0, 1, "LSI");
+	testInicializaAsignatura("Fundamentos de Programación", "1234567", 12.0, 1,
+			"LSI");
 }
 
-void testInicializaAsignatura(const Cadena nombre, const Codigo codigo, double creditos, int curso, const Cadena departamento){
+void testInicializaAsignatura(const Cadena nombre, const Codigo codigo,
+		double creditos, int curso, const Cadena departamento) {
 	Asignatura a1;
 
-	int res = inicializaAsignatura(&a1, nombre, codigo, creditos, curso, departamento);
+	int res = inicializaAsignatura(&a1, nombre, codigo, creditos, curso,
+			departamento);
 
 	if (res == -1) {
 		printf("Hubo algún problema con la inicialización.\n");

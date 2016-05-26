@@ -8,7 +8,9 @@
 #ifndef INCLUDES_CADENA_H_
 #define INCLUDES_CADENA_H_
 
-#define MAXCAR 256
+#include <string.h>
+
+#define MAXCAR 257
 typedef char Cadena[MAXCAR];
 void quitaSaltoDeLinea(Cadena c);
 

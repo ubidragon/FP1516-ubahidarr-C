@@ -1,9 +1,33 @@
-11:38:06 **** Build of configuration Default for project FP1516-C-ubahidarr ****
+02:38:32 **** Incremental Build of configuration Debug for project FP1516-C-ubahidarr ****
 mingw32-make all 
-Cannot run program "mingw32-make": Launching failed
+cmd \/C del testCadena.exe
+cmd \/C del testAsignatura.exe
+cmd \/C del testGrado.exe
+cmd \/C del testEspacio.exe
+cmd \/C del testCentro.exe	
+gcc -I . -I./includes cadena.c testCadena.c -o testCadena.exe
+gcc -I . -I./includes asignatura.c cadena.c testAsignatura.c -o testAsignatura.exe
+gcc -I . -I./includes grado.c asignatura.c cadena.c testGrado.c -o testGrado.exe
+gcc -I . -I./includes espacio.c cadena.c testEspacio.c -o testEspacio.exe
+espacio.c: In function 'inicializaEspacio':
+espacio.c:15:10: warning: passing argument 1 of 'printf' from incompatible pointer type
+   printf(stderr, "Error en la capacidad: %d\n", capacidad);
+          ^
+In file included from ./includes/espacio.h:11:0,
+                 from espacio.c:10:
+c:\mingw\include\stdio.h:293:37: note: expected 'const char *' but argument is of type 'struct FILE *'
+ _CRTIMP int __cdecl __MINGW_NOTHROW printf (const char*, ...);
+                                     ^
+gcc -I . -I./includes espacio.c centro.c cadena.c testCentro.c -o testCentro.exe
+espacio.c: In function 'inicializaEspacio':
+espacio.c:15:10: warning: passing argument 1 of 'printf' from incompatible pointer type
+   printf(stderr, "Error en la capacidad: %d\n", capacidad);
+          ^
+In file included from ./includes/espacio.h:11:0,
+                 from espacio.c:10:
+c:\mingw\include\stdio.h:293:37: note: expected 'const char *' but argument is of type 'struct FILE *'
+ _CRTIMP int __cdecl __MINGW_NOTHROW printf (const char*, ...);
+                                     ^
 
-Error: Program "mingw32-make" not found in PATH
-PATH=[C:/Program Files/Java/jre1.8.0_91/bin/client;C:/Program Files/Java/jre1.8.0_91/bin;C:/Program Files/Java/jre1.8.0_91/lib/i386;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files\Skype\Phone\;C:\Users\Ubidragon\Downloads\eclipse-cpp-mars-2-win32\eclipse;]
-
-11:38:07 Build Finished (took 1s.104ms)
+02:39:03 Build Finished (took 30s.792ms)
 
