@@ -4,7 +4,7 @@
  *  Created on: 7 de may. de 2016
  *      Author: Ubidragon
  */
-
+#include <stdio.h>
 #include "asignatura.h"
 
 int inicializaAsignatura(PAsignatura res, const Cadena nombre,
